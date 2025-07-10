@@ -43,6 +43,11 @@ def delete(request, task_id):
     return redirect(index)
 
 def update(request, task_id):
+    try:
+        task = Task.objects.get(pk=task_id)
+    except Task.DoesNotExist:
+        raise Http404("Task does not exist")
+    task.delete()
     if request.method == 'POST':
         task.title = request.POST['title']
         task.due_at = make_aware(parse_datetime(request.POST['due_at']))
