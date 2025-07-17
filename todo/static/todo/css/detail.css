@@ -1,0 +1,30 @@
+body {
+  background: #f0f6ff;
+  color: #235;
+  font-family: sans-serif;
+}
+h1 {
+  color: #1877d2;
+}
+a {
+  color: #1877d2;
+  text-decoration: none;
+  margin-right: 15px;
+}
+a:hover {
+  text-decoration: underline;
+  color: #0b3c91;
+}
+ul {
+  background: #ffffffcc;
+  border: 1px solid #bcd;
+  border-radius: 5px;
+  padding: 1em 1.5em;
+  max-width: 360px;
+}
+li {
+  margin-bottom: 0.5em;
+}
+a[href*='delete'] {
+  color: #d32f2f;
+}
